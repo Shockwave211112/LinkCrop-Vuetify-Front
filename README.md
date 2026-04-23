@@ -1,56 +1,76 @@
-# LinkCrop
-Frontend к API сервиса по сокращению ссылок.
+# 🖼️ LinkCrop Frontend
 
-Целью было попробовать создать какой-никакой фронт к завалявшемуся API и попробовать
-сделать UI на современном стеке Vue 3 + TS + Vuetify с возможностью смены темы и
-переключением языка, поиском и всем CRUD функционалом, а также рабочей OAuth Google
-авторизацией.
->Vue.JS - 3.4.31
->
->Vuetify - 3.6.14
->
->Pinia - 2.2.8
->
->i18n - 11.0.1
->
->Vite - 5.4.10
->
->Vuelidate - 2.0.3
-> 
->TypeScript
->
->Vue Router | ChartJS | MDIcons
+[![Vue](https://img.shields.io/badge/Vue.js-3.4.31-42b883.svg)](https://vuejs.org/)
+[![Vuetify](https://img.shields.io/badge/Vuetify-3.6.14-1867c0.svg)](https://vuetifyjs.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6.svg)](https://www.typescriptlang.org/)
+[![Docker](https://img.shields.io/badge/Docker-Supported-blue.svg)](https://www.docker.com/)
 
-## 💿 Запуск
-Для запуска требуется API URL в .env.
+Современный фронтенд для сервиса сокращения ссылок. Проект создан в рамках изучения Vue 3 + TypeScript + Vuetify.
 
-* Вручную:
-```bash
-  npm install
-```
-```bash
-  npm run dev
-  vite
-```
----
-```bash
-  npm run build
-  vite build
-```
-```bash
-  npm run preview
-  vite preview
-```
----
-* Docker (preview):
-```bash
-cd docker
-```
-```bash
-docker compose up -d
-```
+## 📌 О проекте
 
-## 🖼️ Вид
+Этот проект — фронтенд-часть [LinkCrop](https://github.com/Shockwave211112/LinkCrop-Laravel-API). Реализован на стеке Vue 3 Composition API с поддержкой TypeScript. Интерфейс построен на Vuetify с возможностью переключения темы (светлая/тёмная) и локализации.
+
+### 🌟 Основные возможности
+*   🔐 **OAuth аутентификация** через Google (&Facebook)
+*   🔗 **Полный CRUD** для управления ссылками и группами
+*   🎨 **Смена темы** (светлая/тёмная)
+*   🌍 **Локализация** (i18n)
+*   📊 **Графики статистики** переходов (Chart.js)
+*   👑 **Панель администратора** для просмотра и редактирования всех данных
+
+## 🛠️ Технологический стек
+
+| Технология | Версия  | Назначение                    |
+| :--------- | :------ | :---------------------------- |
+| Vue        | 3.4.31  | Основной фреймворк            |
+| Vuetify    | 3.6.14  | Material Design компоненты    |
+| TypeScript | ~5.x    | Статическая типизация         |
+| Pinia      | 2.2.8   | Менеджер состояния            |
+| Vue Router | ^4      | Маршрутизация                 |
+| Vuelidate  | 2.0.3   | Валидация форм                |
+| i18n       | 11.0.1  | Интернационализация           |
+| Chart.js   | ^4      | Графики статистики            |
+| Vite       | 5.4.10  | Сборка и dev-сервер           |
+
+## 🚀 Быстрый старт
+
+### Предварительные требования
+*   npm / yarn / pnpm
+*   Docker (опционально)
+*   Запущенный [бэкенд API](https://github.com/Shockwave211112/LinkCrop-Laravel-API)
+
+### Локальный запуск вручную
+Изначально нацелен на работу через Docker
+1.  Склонировать репозиторий.
+2.  Создать .env, указав URL API:
+    ```
+    VITE_API_URL=http://localhost:8000
+    ```
+3.  Запустить Docker:
+    ```
+    cd docker
+    docker compose up -d
+    ```
+
+#### Либо запуск без Docker:
+1.  Установить зависимости
+    ```
+    npm install
+    ```
+2.  Создать .env, указав URL API:
+    ```
+    VITE_API_URL=http://localhost:8000
+    ```
+3.  Запустить dev/собрать и запустить прод:
+    ```
+    npm run dev
+    /
+    npm run build
+    npm run preview
+    ```
+
+## 🖼️ Интерфейс
 ### Стартовая страница
 ![Стартовая страница dark-eng](https://github.com/user-attachments/assets/5ebd96ff-36e2-444b-9bd0-a7c7352261db)
 ![Стартовая страница light-rus](https://github.com/user-attachments/assets/523c41a8-d87d-42b6-a4f3-7d8249ac84b9)
