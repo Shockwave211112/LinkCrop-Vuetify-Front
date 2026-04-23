@@ -223,6 +223,6 @@ function start () {
 
 main {
   background-color: rgba(var(--v-theme-secondary), 0.2);
-  backdrop-filter: blur(10px) brightness(90%);
+  backdrop-filter: blur(10px) brightness(85%);
 }
 </style>

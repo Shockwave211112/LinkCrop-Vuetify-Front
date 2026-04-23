@@ -123,7 +123,9 @@ async function logout() {
             {{ t('header.title') }}
           </v-btn>
         </template>
-        <v-card>
+        <v-card
+          min-width="300"
+        >
           <transition
             name="fade"
             mode="out-in"

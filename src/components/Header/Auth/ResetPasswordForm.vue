@@ -107,6 +107,6 @@ onMounted(() => {
 <style scoped>
 main {
   background-color: rgba(var(--v-theme-secondary), 0.2) !important;
-  backdrop-filter: blur(10px) brightness(90%) !important;
+  backdrop-filter: blur(10px) brightness(85%) !important;
 }
 </style>
